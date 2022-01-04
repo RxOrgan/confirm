@@ -1,5 +1,6 @@
 # Material-UI confirm [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jonatanklosko/material-ui-confirm/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/material-ui-confirm.svg)](https://www.npmjs.com/package/material-ui-confirm) [![Actions Status](https://github.com/jonatanklosko/material-ui-confirm/workflows/Test/badge.svg)](https://github.com/jonatanklosko/material-ui-confirm/actions) [![Coverage Status](https://coveralls.io/repos/github/jonatanklosko/material-ui-confirm/badge.svg?branch=master)](https://coveralls.io/github/jonatanklosko/material-ui-confirm?branch=master)
 
+> Copy from https://github.com/jonatanklosko/material-ui-confirm version 3.0.3
 > Confirming user choice is a good thing to do, it should also be easy to do.
 
 This package provides simple confirmation dialogs built on top of [@mui/material](https://mui.com/)
@@ -35,16 +36,16 @@ const App = () => {
 export default App;
 ```
 
-Call the `useConfirm` hook wherever you need the `confirm` function.\
-*Note: A component calling `useConfirm` must be a child of `ConfirmProvider`.*
+Call the `useAsyncConfirm` hook wherever you need the `confirm` function.\
+*Note: A component calling `useAsyncConfirm` must be a child of `ConfirmProvider`.*
 
 ```js
 import React from 'react';
 import Button from '@mui/material/Button';
-import { useConfirm } from 'material-ui-confirm';
+import { useAsyncConfirm } from 'material-ui-confirm';
 
 const Item = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
 
   const handleClick = () => {
     confirm({ description: 'This action is permanent!' })
@@ -72,9 +73,9 @@ This component is required in order to render a dialog in the component tree.
 
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-| **`defaultOptions`** | `object` | `{}` | Overrides the default options used by [`confirm`](#useconfirm-confirm). |
+| **`defaultOptions`** | `object` | `{}` | Overrides the default options used by [`confirm`](#useAsyncConfirm-confirm). |
 
-#### `useConfirm() => confirm`
+#### `useAsyncConfirm() => confirm`
 
 This hook returns the `confirm` function.
 

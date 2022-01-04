@@ -5,13 +5,13 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import { storiesOf } from '@storybook/react';
-import { ConfirmProvider, useConfirm } from '../src/index';
+import { ConfirmProvider, useAsyncConfirm } from '../src/index';
 
 const confirmationAction = action('confirmed');
 const cancellationAction = action('cancelled');
 
 const Basic = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => confirm().then(confirmationAction)}>
       Click
@@ -20,7 +20,7 @@ const Basic = () => {
 };
 
 const WithDescription = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({ description: 'This action is permanent!' })
@@ -32,7 +32,7 @@ const WithDescription = () => {
 };
 
 const WithCustomText = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({
@@ -49,7 +49,7 @@ const WithCustomText = () => {
 };
 
 const WithDialogProps = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({
@@ -63,7 +63,7 @@ const WithDialogProps = () => {
 };
 
 const WithCustomButtonProps = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({
@@ -78,7 +78,7 @@ const WithCustomButtonProps = () => {
 };
 
 const WithCustomCallbacks = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm()
@@ -92,7 +92,7 @@ const WithCustomCallbacks = () => {
 };
 
 const WithCustomElements = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({
@@ -117,7 +117,7 @@ const WithCustomElements = () => {
 };
 
 const WithCustomContent = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({
@@ -136,7 +136,7 @@ const WithCustomContent = () => {
 };
 
 const WithNaturalCloseDisabled = () => {
-  const confirm = useConfirm();
+  const confirm = useAsyncConfirm();
   return (
     <Button onClick={() => {
       confirm({

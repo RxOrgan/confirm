@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, fireEvent, waitForElementToBeRemoved } from '@testing-library/react'
 
-import { ConfirmProvider, useConfirm } from '../src/index';
+import { ConfirmProvider, useAsyncConfirm } from '../src/index';
 
-describe('useConfirm', () => {
+describe('useAsyncConfirm', () => {
   const deleteConfirmed = jest.fn();
   const deleteCancelled = jest.fn();
 
   const DeleteButton = ({ confirmOptions }) => {
-    const confirm = useConfirm();
+    const confirm = useAsyncConfirm();
 
     return (
       <button onClick={() => confirm(confirmOptions).then(deleteConfirmed).catch(deleteCancelled)}>
