@@ -1,7 +1,7 @@
 {
-  "name": "material-ui-confirm",
+  "name": "rx-mui-confirm",
   "version": "3.0.3",
-  "description": "Higher order component for straightforward use of @material-ui/core confirmation dialogs.",
+  "description": "Copy from https://github.com/jonatanklosko/material-ui-confirm.git",
   "keywords": [
     "Material UI",
     "confirmation",
@@ -11,12 +11,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonatanklosko/material-ui-confirm.git"
+    "url": "https://github.com/RxOrgan/confirm.git"
   },
   "bugs": {
-    "url": "https://github.com/jonatanklosko/material-ui-confirm/issues"
+    "url": "https://github.com/RxOrgan/confirm/issues"
   },
-  "homepage": "https://github.com/jonatanklosko/material-ui-confirm",
+  "homepage": "https://github.com/RxOrgan/confirm",
   "main": "dist/material-ui-confirm.cjs.js",
   "module": "dist/material-ui-confirm.esm.js",
   "types": "dist/index.d.ts",
